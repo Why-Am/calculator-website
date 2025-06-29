@@ -6,7 +6,7 @@ https://www.theodinproject.com/lessons/foundations-calculator
 
 ## Goals:
 
--   [ ] Add decimal point button
--   [ ] Round answers with long decimals? (or just truncate display)
--   [ ] complete full test
+-   [x] Add decimal point button
+-   [x] Round answers with long decimals? (or just truncate display)
+-   [ ] Add sign toggle
 -   [ ] Style

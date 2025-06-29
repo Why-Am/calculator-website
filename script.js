@@ -20,6 +20,14 @@ function pressNumber(n) {
     updateScreen();
 }
 
+function pressDecimal() {
+    if (memoryIsAnswer()) memory = [];
+    else if (screenValue.includes(".")) return;
+
+    screenValue.push(".");
+    updateScreen();
+}
+
 function pressOperator(op) {
     addScreenValueToMemory();
     if (memoryIsEmpty()) {
@@ -32,7 +40,7 @@ function pressOperator(op) {
         memory.splice(-1, 1, op);
     } else if (memoryIsNOpN()) {
         memory = [operate(...memory), op];
-        updateScreen(memory[0].toString());
+        updateScreen(memory[0]);
         screenValue = [];
     } else if (memoryIsAnswer()) {
         memory = [memory[1], op];
@@ -46,6 +54,7 @@ function pressOperator(op) {
 function pressClear() {
     memory = [];
     screenValue = [];
+    setIndicator(false);
     updateScreen();
 }
 
@@ -59,7 +68,7 @@ function pressEquals() {
         memory = ["a", operate(...memory)];
         setIndicator(false);
     }
-    updateScreen(memory[1].toString());
+    updateScreen(memory[1]);
     screenValue = [];
 }
 
@@ -94,6 +103,9 @@ function buttonHandler(event) {
             break;
         case "button-zero":
             pressNumber(0);
+            break;
+        case "button-decimal":
+            pressDecimal();
             break;
         case "button-clear":
             pressClear();
@@ -150,6 +162,9 @@ function keyHandler(event) {
         case "0":
             pressNumber(0);
             break;
+        case ".":
+            pressDecimal();
+            break;
         case "c":
             pressClear();
             break;
@@ -176,7 +191,9 @@ function keyHandler(event) {
 
 function updateScreen(optionalValue) {
     screen.textContent =
-        optionalValue === undefined ? screenValue.join("") : optionalValue;
+        optionalValue === undefined
+            ? screenValue.join("")
+            : optionalValue.toPrecision(7);
 }
 
 function getScreenValue() {
