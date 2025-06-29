@@ -1,2 +1,12 @@
 # calculator-website
+
 https://www.theodinproject.com/lessons/foundations-calculator
+
+[flow chart I created that details operation](https://mermaid.live/edit#pako:eNplk2GvmjAUhv9K0324W1KNQLkoJkuW-RP2aXI_HMtByaDtEHZ3p_73VUoFC4nRvu85Pe9D64UKlSNNaVGpd3GCpiU_dpkk5sFatx-fM7p_y-gXK8n7Ur6RxVciR1HpXmbkRekXay6nrpzYjPjtcHe_yfM7NhNnEoEsjFoGl1Lqrr1Zowx6VUCwl119MK2eHu6VxgZa1TAiKgTzhb87qIY609gXSrcM-2U_zw2XdnD4PNgWioM_2OnjYN_h-2mChxzt-3wu2MEGu4LWKPPrI-HB1pvX6YRoGtlKvJfgQaC0ZYieGWynED6D0-cMzvEYnOwxiMBldemFTX81N0wekbjtrxMeMecRlucqFcGiQNEO9ePNsnj8Gc92idzHc_oczzkenpM9vNw_opEzHzjxD1QdtEhaReSUMp9T5t6pgYWKn6FimwV9KKfPoZzjQTnZg8IBqkFdgcDx4uGA9AtRT0lwToITElHB-bzDgpxbMP_hoqyq9FMBsB0s28gkMzveP5KBLd1Oevs3MPQCFI_eMmBlyMqIlZwZoL5sSxk9NmVO0wKqMzJaY1PDfU0v93wZbU9YY0ZT8zPHArqqzWgmb6ZPg_ypVE3TtulMZ6O64-mxT6dzc5K7Eo4NjCXm5LH5rjrZ0pTzeNNvQtML_UvTBedLvl5twjBOkiR-jSJGP4wcJcFyHb3yKFqt-Hqz3vAbo__6wcGSRzwMzBPH0SpIktt_taCpeA)
+
+## Goals:
+
+-   [ ] Add decimal point button
+-   [ ] Round answers with long decimals? (or just truncate display)
+-   [ ] complete full test
+-   [ ] Style

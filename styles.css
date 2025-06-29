@@ -1,0 +1,14 @@
+.indicator-on, .indicator-off {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.indicator-off {
+    opacity: 0;
+}
+
+.indicator-on {
+    opacity: 1;
+}
