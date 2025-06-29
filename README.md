@@ -8,5 +8,5 @@ https://www.theodinproject.com/lessons/foundations-calculator
 
 -   [x] Add decimal point button
 -   [x] Round answers with long decimals? (or just truncate display)
+-   [x] Style
 -   [ ] Add sign toggle
--   [ ] Style

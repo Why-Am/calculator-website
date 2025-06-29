@@ -199,11 +199,9 @@ function updateScreen(optionalValue) {
         let offset =
             optionalValue.toPrecision(SCREEN_WIDTH_IN_DIGITS).length -
             SCREEN_WIDTH_IN_DIGITS;
-        console.log(offset);
         screen.textContent = optionalValue.toPrecision(
             SCREEN_WIDTH_IN_DIGITS - offset
         );
-        console.log(optionalValue.toPrecision(SCREEN_WIDTH_IN_DIGITS - offset));
     } else {
         screen.textContent = optionalValue.toString();
     }
