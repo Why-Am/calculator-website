@@ -1,4 +1,5 @@
 const [DIVIDE, MULTIPLY, SUBTRACT, ADD] = ["/", "*", "-", "+"];
+const SCREEN_WIDTH_IN_DIGITS = 13;
 
 const buttons = document.querySelector("#buttons");
 const screen = document.querySelector("#screen");
@@ -190,10 +191,22 @@ function keyHandler(event) {
 }
 
 function updateScreen(optionalValue) {
-    screen.textContent =
-        optionalValue === undefined
-            ? screenValue.join("")
-            : optionalValue.toPrecision(7);
+    if (optionalValue === undefined) {
+        screen.textContent = screenValue
+            .join("")
+            .slice(-SCREEN_WIDTH_IN_DIGITS);
+    } else if (optionalValue.toString().length > SCREEN_WIDTH_IN_DIGITS) {
+        let offset =
+            optionalValue.toPrecision(SCREEN_WIDTH_IN_DIGITS).length -
+            SCREEN_WIDTH_IN_DIGITS;
+        console.log(offset);
+        screen.textContent = optionalValue.toPrecision(
+            SCREEN_WIDTH_IN_DIGITS - offset
+        );
+        console.log(optionalValue.toPrecision(SCREEN_WIDTH_IN_DIGITS - offset));
+    } else {
+        screen.textContent = optionalValue.toString();
+    }
 }
 
 function getScreenValue() {

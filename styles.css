@@ -1,8 +1,22 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .indicator-on, .indicator-off {
-    width: 10px;
-    height: 10px;
+    width: 3px;
+    height: 3px;
     border-radius: 100%;
-    background-color: red;
+    background-color: #fee;
+    box-shadow:
+        0 0 3px red,
+        0 0 10px red,
+        0 0 10px red,
+        0 0 10px red,
+        0 0 20px red,
+        0 0 30px red;
 }
 
 .indicator-off {
@@ -11,4 +25,40 @@
 
 .indicator-on {
     opacity: 1;
+}
+
+.calculator {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen-container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px;
+    flex: 0 0 auto;
+    height: 40px;
+    width: 300px;
+}
+
+#screen {
+    font-size: 36px;
+    font-weight: lighter;
+    font-family: 'Courier', monospace;
+    color: #fee;
+    text-shadow:
+        0 0 3px red,
+        0 0 10px red,
+        0 0 10px red,
+        0 0 20px red,
+        0 0 30px red;
+}
+
+button {
+    font-size: x-large;
 }
